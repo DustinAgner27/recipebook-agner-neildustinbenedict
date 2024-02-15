@@ -8,7 +8,11 @@
 
 {% for recipe in recipes %}
 <a href={{ recipe.link }}>
-    <h3>{{ recipe.name }}</h3>
+    <ul>
+        <li>
+            <h3>{{ recipe.name }}</h3>
+        </li>
+    </ul>
 </a>
 {% endfor %}
 {% endblock %}
