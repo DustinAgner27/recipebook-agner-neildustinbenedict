@@ -6,8 +6,8 @@
 
 <h2>Recipe List</h2> 
 
-{% for recipe in recipes %}
-<a href={{ recipe.link }}>
+{% for recipe in recipe_list %}
+<a href="{{ recipe.get_absolute_url }}">
     <ul>
         <li>
             <h3>{{ recipe.name }}</h3>

@@ -4,11 +4,11 @@
 {% block title %} {{ name }} {% endblock %}
 {% block content %}
 
-<h2> {{ name }} </h2> 
+<h2> {{ recipe.name }} </h2> 
 
-{% for content in ingredients %}
+{% for ingredient in recipe.ingredients.all %}
     <ul>
-        <li>{{ content.name }} : {{ content.quantity }}</li> 
+        <li>{{ ingredient.ingredient_key }} : {{ ingredient.quantity }}</li> 
     </ul>
 {% endfor %}
 
