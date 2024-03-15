@@ -2,15 +2,16 @@
 {% load static %}
 
 {% block title %}Recipe List{% endblock %}
+{% block page_title %}Recipe List{% endblock %}
 {% block content %}
 
-<h2>Recipe List</h2> 
+<h3>Recipe List</h3> 
 
-{% for recipe in recipes %}
-<a href={{ recipe.link }}>
+{% for recipe in recipe_list %}
+<a href="{{ recipe.get_absolute_url }}">
     <ul>
         <li>
-            <h3>{{ recipe.name }}</h3>
+            <h4>{{ recipe.name }}</h4>
         </li>
     </ul>
 </a>

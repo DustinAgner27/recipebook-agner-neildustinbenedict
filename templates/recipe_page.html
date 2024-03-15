@@ -2,13 +2,15 @@
 {% load static %}
 
 {% block title %} {{ name }} {% endblock %}
+{% block page_title %}Recipe Details{% endblock %}
 {% block content %}
 
-<h2> {{ name }} </h2> 
+<h3> {{ recipe.name }} </h3> 
+<h3> Made By: {{ recipe.author }} </h3> 
 
-{% for content in ingredients %}
+{% for ingredient in recipe.ingredients.all %}
     <ul>
-        <li>{{ content.name }} : {{ content.quantity }}</li> 
+        <li>{{ ingredient.ingredient_key }} : {{ ingredient.quantity }}</li> 
     </ul>
 {% endfor %}
 
